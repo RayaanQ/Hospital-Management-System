@@ -11,7 +11,7 @@ window.onscroll = () =>{
     navbar.classList.remove('active');
 }
 
-function booknow(e){
+function booku(e){
     e.preventDefault();
     
     var name = document.getElementById('name').value;
@@ -54,4 +54,4 @@ function booknow(e){
 
 }
 
-document.getElementById('booking').addEventListener('submit', booknow, false);
+// document.getElementById('booking').addEventListener('submit', booku, false);
