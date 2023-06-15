@@ -54,4 +54,4 @@ function booku(e){
 
 }
 
-// document.getElementById('booking').addEventListener('submit', booku, false);
+// document.getElementById('booking').addEventListener('submit', booku, true);

@@ -392,13 +392,13 @@ section:nth-child(even)
 }
 
 .review .box-container .box h3{
-    color: #fff;
+    color: var(--black);
     font-size:  2.2 rem;
     padding: .5rem 0;
 }
 
 .review .box-container .box .stars i{
-    color: #fff;
+    color: var(--black);
     font-size:  1.5 rem;
 }
 
