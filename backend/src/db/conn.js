@@ -1,22 +1,11 @@
-const mongoose = require("mongoose");
+// const mongoose = require("mongoose");
 // const url = "mongodb://127.0.0.1:27017/booknow";
+const mongoose = require("mongoose");
 
-// mongoose.connect(url).then(() => {
-//     console.log(`connection successful`);
-// }).catch((e) => {
-//     console.log(`no connection`);
-// })
-mongoose.set('strictQuery',false);
+const uri = "mongodb+srv://RayaanQ:bNJdG6anTUDfB0kX@cluster0.iwrkyfz.mongodb.net/?retryWrites=true&w=majority";
 
-const connectDB = async()=> {
-    try
-    {
-        const conn = await mongoose.connect(process.env.MONGO_URI);
-        console.log(`Connection successfull on : ${conn.connection.host}`);
-    }
-    catch(error)
-    {
-        console.log(error);
-        process.exit(1);
-    }
-}
+mongoose.connect(uri).then(() => {
+    console.log(`connection successful`);
+}).catch((e) => {
+    console.log(`no connection`);
+})
