@@ -3,7 +3,7 @@ const path = require("path");
 const app = express();
 const hbs = require("hbs");
 
-
+require('dotenv').config();
 require("./db/conn");
 const Booknow = require("./models/booknow");
 
