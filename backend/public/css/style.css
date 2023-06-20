@@ -353,6 +353,10 @@ section:nth-child(even)
     padding: 1rem;
 }
 
+.book .row form .box #reason{
+    height: 20px;
+}
+
 .book .row form .btn{
     padding:1rem 4rem;
 }

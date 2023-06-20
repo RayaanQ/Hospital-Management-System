@@ -10,6 +10,7 @@ const Booknow = require("./models/booknow");
 const port = process.env.PORT || 3000;
 
 const static_path = path.join(__dirname, "../public");
+const static2_path = path.join(__dirname, "script");
 
 const template_path = path.join(__dirname, "../templates/views");
 
@@ -17,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 app.use(express.static(static_path));
+app.use(express.static(static2_path));
 app.set("view engine", "hbs");
 app.set("views",template_path);
 
@@ -37,7 +39,8 @@ app.post("/", async (req, res) => {
             name: req.body.name,
             number: req.body.number,
             email: req.body.email,
-            date: req.body.date
+            date: req.body.date,
+            reason: req.body.reason
         })
 
     const booked = await bookingdetails.save();
